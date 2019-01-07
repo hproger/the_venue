@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous|Roboto:300,400,500');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+#root {
+    overflow: hidden;
+}
+.center_wrapper {
+    text-align: center;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.center_wrapper h2 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 30px 0;
+    font-size: 32px;   
+}
+.font_righteous {
+    font-family: 'Righteous', cursive;
+}
+.header_logo {
+    flex-grow: 1;
+}
+.header_logo_venue {
+    font-size: 34px;
+    line-height: 1.2;
+}
+.header_logo_title {
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.text_slider {
+    width: 200px;
+    border: 1px solid white;
+    padding: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.text_slider .wrapper {
+    padding: 15px 30px;
+    border: 1px solid white;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+/* TimeUntil Component begin */
+.countdown_wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.countdown_top {
+    background: orangered;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1;
+    padding: 5px;
+    display: inline-block;
+}
+.countdown_bottom .countdown_item{
+    background: #c73803;
+    padding: 10px 25px 10px 15px;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    position: relative;
+}
+.countdown_bottom .countdown_item:after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    width: 1px;
+    height: 60%;
+    background: rgba(255,255,255,.1);
+    left: 0;
+}
+.countdown_bottom .countdown_time {
+    font-size: 42px;
+}
+.countdown_bottom .countdown_tag {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+@media (max-width: 480px) {
+    .countdown_bottom .countdown_time {
+        font-size: 30px;
+    }
+    .countdown_bottom .countdown_tag {
+        font-size: 10px;
+    }
+}
+/* TimeUntil Component end */
+
+/* VenueNfo component begin */
+.bck_black {
+    background: #424242;
+    color: #fff;
+}
+.bck_black.padding {
+    padding: 100px 0;
+}
+.vn_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 940px;
+    margin: 0 auto;
+}
+.vn_item {
+    color: #fff;
+    text-align: center;
+    max-width: 180px;
+    margin: 0 50px;
+    position: relative;
+}
+.vn_outer {
+    border: 1px solid rgba(255,255,255,.7);
+    padding: 3px;
+}
+.vn_inner {
+    border: 1px solid rgba(255,255,255,.7);
+    padding: 50px 10px;
+}
+.vn_title {
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+}
+.vn_icon_wrapper {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.vn_icon_square {
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+}
+.vn_icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25px;
+    height: 25px;
+    background-size: contain !important;
+}
+.bck_yellow {
+    background: orange;
+}
+.bck_red {
+    background: orangered;
+    color: #fff;
+}
+@media (max-width: 640px) {
+    .vn_wrapper {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .vn_item {
+        margin: 0;
+    }
+}
+@media (max-width: 380px) {
+    .vn_item {
+        margin: 0;
+        flex-grow: 1;
+        max-width: 80%;
+    }
+    .vn_item + .vn_item {
+        margin-top: 70px;
+    }
+}
+/* VenueNfo component end */
+
+/* Highlights component begin */
+.highlight_wrapper {
+    background: #fff;
+    color: #000;
+}
+
+.highlight_wrapper .center_wrapper h2 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 30px 0;
+    font-size: 32px;   
+}
+.highlight_description {
+    border-top: 2px solid rgba(0,0,0,.1);
+    border-bottom: 2px solid rgba(0,0,0,.1);
+    padding: 20px 0;
+    text-align: left;
+}
+.discount_wrapper {
+    display: flex;
+    padding: 50px 0;
+}
+.discount_percentage {
+    text-align: left;
+}
+.discount_percentage span:first-child {
+    font-size: 80px;
+    color: orangered;
+    display: block;
+    line-height: 1;
+}
+.discount_percentage span + span {
+    text-transform: uppercase;
+    font-size: 30px;
+    display: block;
+}
+.discount_description{
+    text-align: left;
+    padding-left: 70px;
+}
+.discount_description h3 {
+    font-weight: 400;
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 580px) {
+    .highlight_wrapper .center_wrapper {
+        padding: 0 15px;
+    }
+}
+@media (max-width: 520px) {
+    .discount_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .discount_description {
+        padding-left: 0;
+        margin-top: 25px;
+    }
+}
+/* Highlights component end */
+/* MyButton component begin */
+.iconImage {
+    max-width: 15px;
+    margin-right: 10px;
+}
+/* MyButton component end */
+
+/* Pricing component begin */
+.pricing_wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.pricing_section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.pricing_section h2 {
+    padding: 20px 0;
+}
+.pricing_item {
+    max-width: 250px;
+    margin: 0 5px;
+}
+.pricing_inner_wrapper {
+    border: 1px solid orange;
+    padding: 30px 15px;
+}
+.pricing_title span:first-child {
+    font-size: 32px;
+    display: block;
+}
+.pricing_title span + span {
+    display: block;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.pricing_description {
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid orange;
+}
+@media (max-width: 680px) {
+    .pricing_wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .pricing_item {
+        margin: 5px;
+    }
+}
+/* Pricing component end */
+
+/* Location component begin */
+.location_wrapper {
+    position: relative;
+    line-height: 0;
+}
+.location_tag {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #424242;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding: 10px 35px;
+}
+/* Location component end */
+
+/* Footer component begin */
+.footer_wrapper {
+    padding: 50px 0;
+    text-align: center;
+}
+.footer_logo_venue {
+    font-size: 62px;
+}
+/* Footer component end */
